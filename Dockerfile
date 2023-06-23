@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["CloudDevAPI_DotNet/CloudDevAPI_DotNet.csproj", "CloudDevAPI_DotNet/"]
-RUN dotnet restore "CloudDevAPI_DotNet/CloudDevAPI_DotNet.csproj"
+COPY ["CloudDevAPI_DotNet.csproj", "/"]
+RUN dotnet restore "CloudDevAPI_DotNet.csproj"
 COPY . .
-WORKDIR "/src/CloudDevAPI_DotNet"
+WORKDIR "/src"
 RUN dotnet build "CloudDevAPI_DotNet.csproj" -c Release -o /app/build
 
 FROM build AS publish
