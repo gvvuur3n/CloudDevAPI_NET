@@ -9,7 +9,6 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["CloudDevAPI_DotNet.csproj", ""]
 RUN dotnet restore "CloudDevAPI_DotNet.csproj"
-WORKDIR "/src"
 RUN dotnet build "CloudDevAPI_DotNet.csproj" -c Release -o /app/build
 
 FROM build AS publish
