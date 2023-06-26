@@ -11,10 +11,10 @@ namespace CloudDevAPI_DotNet.Data
 
 		}
 
-		//public DbSet<User> Users { get; set; }
+		public DbSet<User> User { get; set; }
 		public DbSet<Country> Country { get; set; }
-		//public DbSet<Continent> Continents { get; set; }
-		//public DbSet<Friendship> Friendships { get; set; }
+		public DbSet<Continent> Continent { get; set; }
+		//public DbSet<Friendship> Friendship { get; set; }
 
 	}
 }

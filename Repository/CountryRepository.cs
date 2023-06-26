@@ -31,8 +31,8 @@ namespace CloudDevAPI_DotNet.Repository
 
 		public int GetCountryPopulationById(int id)
 		{
-			throw new NotImplementedException();
-		}
+            return _context.Country.Where(p => p.Id == id).FirstOrDefault().Population;
+        }
 	}
 }
 

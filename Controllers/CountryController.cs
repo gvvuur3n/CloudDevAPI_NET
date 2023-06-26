@@ -45,6 +45,36 @@ namespace CloudDevAPI_DotNet.Controllers
 			return Ok(country);
 		}
 
-	}
+        //[HttpGet("{countryName}")]
+        //[ProducesResponseType(200, Type = typeof(Country))]
+        //[ProducesResponseType(400)]
+        //public IActionResult GetCountry(string name)
+        //{
+        //    var country = _countryRepository.GetCountry(name);
+
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+
+        //    return Ok(country);
+        //}
+
+        [HttpGet("{countryId}/getCountryPopulationById")]
+        [ProducesResponseType(200, Type = typeof(int))]
+        [ProducesResponseType(400)]
+        public IActionResult GetCountryPopulationById(int countryId)
+        {
+            var countryPopulation = _countryRepository.GetCountryPopulationById(countryId);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            return Ok(countryPopulation);
+        }
+
+    }
 }
 
