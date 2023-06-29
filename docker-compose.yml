@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  clouddevapi_dotnet:
+    image: ${DOCKER_REGISTRY-}clouddevapidotnet
+    build:
+      context: .
+      dockerfile: ./Dockerfile
