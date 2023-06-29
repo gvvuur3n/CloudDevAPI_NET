@@ -1,4 +1,6 @@
 ﻿using System;
+using CloudDevAPI_DotNet.Models;
+
 namespace CloudDevAPI_DotNet.DTO
 {
 	public class CountryDto
@@ -10,6 +12,7 @@ namespace CloudDevAPI_DotNet.DTO
         public string Capital { get; set; }
         public int Population { get; set; }
         public string Description { get; set; }
+        public virtual Continent Continent { get; set; }
     }
 }
 

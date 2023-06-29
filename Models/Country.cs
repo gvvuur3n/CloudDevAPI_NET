@@ -10,7 +10,8 @@ namespace CloudDevAPI_DotNet.Models
 		public string Capital { get; set; }
 		public int Population { get; set; }
 		public string Description { get; set; }
-		public Continent Continent { get; set; }
-	}
+        public virtual ICollection<User> User { get; set; }
+        public virtual Continent Continent { get; set; }
+    }
 }
 

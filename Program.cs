@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using CloudDevAPI_DotNet.Data;
 using CloudDevAPI_DotNet.Interfaces;
 using CloudDevAPI_DotNet.Repository;
@@ -7,7 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+//builder.Services.AddControllers();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IContinentRepository, ContinentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudDevAPI_DotNet", "CloudDevAPI_DotNet.csproj", "{6E16339F-4634-4C46-9551-C29D9CCF0325}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudDevAPI_DotNet_Tests", "..\CloudDevAPI_DotNet_Tests\CloudDevAPI_DotNet_Tests.csproj", "{8FB2061B-EF8E-4617-9B57-6309B7A6E2E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6E16339F-4634-4C46-9551-C29D9CCF0325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E16339F-4634-4C46-9551-C29D9CCF0325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E16339F-4634-4C46-9551-C29D9CCF0325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB2061B-EF8E-4617-9B57-6309B7A6E2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB2061B-EF8E-4617-9B57-6309B7A6E2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB2061B-EF8E-4617-9B57-6309B7A6E2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB2061B-EF8E-4617-9B57-6309B7A6E2E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
